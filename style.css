@@ -107,6 +107,7 @@ textarea {
 .radio-label {
     width: 60px;
     vertical-align: top;
+    margin: 0;
 }
 
 .radio-label-female {
