@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
-        <fieldset class="form">
+        <fieldset class="form" autocomplete="off">
             <legend class="legend">Form</legend>
             <div>
-            <label for="#name">your name</label>
-            <input id="name" type="text" placeholder="Name">
+                <label for="#name">your name</label>
+                <input id="name" type="text" placeholder="Name">
             </div>
             <div>
                 <label for="#email">your email</label>
-                <input id="email" type="email" placeholder="Email">
+                <input id="email" type="email" placeholder="Email" autocomplete="off">
             </div>
             <div class="password">
-            <label for="#password">your password</label>
-            <input id="password" type="password" placeholder="Password">
+                <label for="#password">your password</label>
+                <input id="password" type="password" placeholder="Password" autocomplete="new-password">
             </div>
-            <div class="message">
-            <label for="#message">your message</label>
-            <textarea id="message" placeholder="Message"></textarea>
+            <div class="password">
+                <label for="#confirm-password">confirm password</label>
+                <input id="confirm-password" type="password" placeholder="Confirm Password">
+            </div>
+            <div class="gender">
+                <label class="radio-label-title" for="#gender">your gender</label><br>
+                <label class="radio-label" for="#male">male</label>
+                <input class="radio" type="radio" id="male" name="gender" value="male">
+                <label class="radio-label radio-label-female" for="#female">female</label>
+                <input class="radio" type="radio" id="female" name="gender" value="female">
             </div>
             <div>
-            <input type="submit" value="Submit">
+                <label for="#age">your age</label>
+                <input type="number" id="age" min="1" max="100" step="1" placeholder="Age">
+            </div>
+            <div>
+                <label for="#date">your birthday</label>
+                <input class="date" id="date" type="date">
+            </div>
+            <div class="message">
+                <label for="#message">full address</label>
+                <textarea id="message" placeholder="country, region, city/village, street, house"></textarea>
+            </div>
+            
+
+
+
+            <div>
+                <input type="submit" value="Submit">
             </div>
         </fieldset>
     </div>
 </body>
+
 </html>
