@@ -10,51 +10,63 @@
 
 <body>
     <div class="container">
-        <fieldset class="form" autocomplete="off">
+        <form action="">
+            <fieldset class="form" autocomplete="off">
             <legend class="legend">Form</legend>
             <div>
                 <label for="#name">your name</label>
-                <input id="name" type="text" placeholder="Name">
+                <input id="name" type="text" placeholder="Name" required autocomplete="on">
             </div>
             <div>
                 <label for="#email">your email</label>
-                <input id="email" type="email" placeholder="Email" autocomplete="off">
+                <input id="email" type="email" placeholder="Email" autocomplete="off" required>
             </div>
             <div class="password">
                 <label for="#password">your password</label>
-                <input id="password" type="password" placeholder="Password" autocomplete="new-password">
+                <input id="password" type="password" placeholder="Password" autocomplete="new-password" minlength="3" maxlength="8" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+" title="The password must contain at least one lowercase letter, one uppercase letter and one number">
             </div>
             <div class="password">
                 <label for="#confirm-password">confirm password</label>
-                <input id="confirm-password" type="password" placeholder="Confirm Password">
+                <input id="confirm-password" type="password" placeholder="Confirm Password" required>
             </div>
             <div class="gender">
                 <label class="radio-label-title" for="#gender">your gender</label><br>
                 <label class="radio-label" for="#male">male</label>
-                <input class="radio" type="radio" id="male" name="gender" value="male">
+                <input class="radio" type="radio" id="male" name="gender" value="male" required>
                 <label class="radio-label radio-label-female" for="#female">female</label>
-                <input class="radio" type="radio" id="female" name="gender" value="female">
+                <input class="radio" type="radio" id="female" name="gender" value="female" required>
             </div>
             <div>
                 <label for="#age">your age</label>
-                <input type="number" id="age" min="1" max="100" step="1" placeholder="Age">
+                <input type="number" id="age" min="1" max="100" step="1" placeholder="Age" required>
             </div>
             <div>
                 <label for="#date">your birthday</label>
-                <input class="date" id="date" type="date">
+                <input class="date" id="date" type="date" required>
             </div>
             <div class="message">
                 <label for="#message">full address</label>
-                <textarea id="message" placeholder="country, region, city/village, street, house"></textarea>
+                <textarea id="message" placeholder="country, region, city/village, street, house" required></textarea>
             </div>
-            
-
-
-
             <div>
-                <input type="submit" value="Submit">
+                <label for="#courses">your course</label>
+                <select class="select" name="courses" id="courses" id="courses" required>
+                    <option value="front-end">Front-End</option>
+                    <option value="back-end">Back-End</option>
+                    <option value="project-management">Project Management</option>
+                    <option value="qa-manual">QA Manual</option>
+                </select>
+            </div>
+            <div class="checkbox-container">
+                <input class="checkbox" type="checkbox" id="scales" name="scales" required>
+                <label class="checkbox-label" for="scales">I agree with the processing of personal data</label>
+            </div>
+            <div>
+                <input class="reset" type="reset" value="Clear the form">
+                <input class="submit" type="submit" value="Submit" required>
             </div>
         </fieldset>
+        </form>
     </div>
 </body>
 
